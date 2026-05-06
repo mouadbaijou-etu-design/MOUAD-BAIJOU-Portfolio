@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.textContent = 'Envoi en cours...';
       btn.disabled = true;
 
-      emailjs.sendForm("service_t0zqug9", "template_9ilmg88", form)
+      emailjs.sendForm("service_urrn53d", "template_9ilmg88", form)
         .then(() => {
           form.reset();
           btn.textContent = 'Envoyer le message';
