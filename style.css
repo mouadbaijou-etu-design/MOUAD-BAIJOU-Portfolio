@@ -42,7 +42,20 @@ body {
   overflow-x: hidden;
   line-height: 1.7;
 }
+.btn-cv {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
 
+.btn-cv:hover {
+  background: rgba(201,168,76,0.1);
+  transform: translateY(-1px);
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -962,6 +975,15 @@ h2 em {
   padding: 12px;
   background: rgba(201, 168, 76, 0.1);
   border-radius: 8px;
+}
+.cv-download-box {
+  margin-top: 32px;
+  padding: 24px;
+  border-radius: var(--radius);
+  border: 1px dashed rgba(201,168,76,0.4);
+  background: rgba(201,168,76,0.05);
+  color: var(--light);
+  font-size: 0.95rem;
 }
 
 /* ── FOOTER ── */
