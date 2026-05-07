@@ -187,8 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroTag = document.querySelector('.hero-tag');
   if (heroTag) {
     const texts = [
-      'Étudiant Master • Ingénierie Commerciale et Marketing Digital',
-      'Passionné par le Commerce',
       'Disponible pour Stage ou Collaboration',
     ];
     let i = 0;
