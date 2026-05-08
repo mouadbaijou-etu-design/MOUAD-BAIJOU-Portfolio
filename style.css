@@ -525,7 +525,6 @@ h2 em {
   background: transparent;
   object-fit: contain;
   object-position: bottom center;
-  /* Empêche le débordement à droite */
   transform: translateX(0);
 }
 
@@ -590,7 +589,6 @@ h2 em {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    /* Supprime tout débordement */
     overflow: hidden;
     padding: 0 20px;
   }
@@ -600,7 +598,6 @@ h2 em {
     max-height: 50vh;
     border-radius: 0 0 100px 100px;
     margin: 0 auto;
-    /* Centre la photo horizontalement */
     display: block;
     transform: none;
   }
@@ -631,46 +628,47 @@ h2 em {
     padding: 6px 14px;
   }
 }
-/* NOUVEAU : Conteneur photo avec cadre doré */
+
+/* ═══════════════════════════════════════════════════════════
+   ABOUT — STYLE ORIGINAL (retour au code initial)
+   ═══════════════════════════════════════════════════════════ */
+
+#about {
+  padding: 120px 0;
+  background: var(--navy2);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Photo wrap — style original avec fond dégradé */
 .about-photo-wrap {
   position: relative;
   padding: 20px;
-  max-width: 100%;
 }
 
-.about-photo-frame {
-  position: relative;
-  padding: 8px;
-  background: linear-gradient(135deg, var(--gold), var(--gold2), var(--accent));
-  border-radius: calc(var(--radius) + 8px);
-  box-shadow: 
-    0 20px 60px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(255, 255, 255, 0.05);
-}
-
-.about-photo-inner {
-  position: relative;
+.about-photo-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--gold), var(--accent));
   border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--navy);
+  opacity: 0.2;
+  transform: rotate(3deg);
 }
 
 .about-photo {
   width: 100%;
-  height: auto;
-  aspect-ratio: 4/5;
+  border-radius: var(--radius);
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--shadow);
   object-fit: cover;
-  object-position: top center;
+  aspect-ratio: 4/5;
   display: block;
-  background: var(--navy);
-  /* Supprime tout fond blanc parasite */
-  mix-blend-mode: normal;
-  filter: contrast(1.02) saturate(0.98);
-  transition: transform 0.5s ease;
-}
-
-.about-photo:hover {
-  transform: scale(1.02);
 }
 
 .about-placeholder {
@@ -679,17 +677,21 @@ h2 em {
   justify-content: center;
   width: 100%;
   aspect-ratio: 4/5;
+  border-radius: var(--radius);
   background: var(--navy3);
   font-family: var(--ff-head);
   font-size: 5rem;
   font-weight: 900;
   color: var(--gold);
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--shadow);
 }
 
 .about-badge {
   position: absolute;
-  bottom: 40px;
-  right: -10px;
+  bottom: 30px;
+  right: 0;
   z-index: 2;
   background: var(--gold);
   color: var(--navy);
@@ -697,7 +699,6 @@ h2 em {
   padding: 14px 20px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  white-space: nowrap;
 }
 
 .badge-num {
@@ -1384,13 +1385,9 @@ footer p {
     width: 10px;
     height: 10px;
   }
-  /* Photo mobile */
   .about-photo-wrap {
     max-width: 280px;
     padding: 10px;
-  }
-  .about-photo-frame {
-    padding: 6px;
   }
   .about-badge {
     padding: 10px 14px;
