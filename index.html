@@ -3,14 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio de Baijou Mouad, étudiant Master en Ingénierie Commerciale et Marketing Digital à l'ENSET Mohammedia. Disponible pour stage en marketing digital et commerce." />
+    <meta name="keywords" content="Baijou Mouad, Marketing Digital, Commerce, ENSET Mohammedia, Stage Marketing, Portfolio" />
+    <meta name="author" content="Baijou Mouad" />
+    <meta name="theme-color" content="#0a0e1a" />
+    
     <title>Baijou Mouad — Portfolio</title>
+    
+    <!-- Preconnect pour les polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" as="style" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Baijou Mouad",
+      "jobTitle": "Étudiant Master Ingénierie Commerciale et Marketing Digital",
+      "url": "https://baijoumouad.dev",
+      "image": "photo.jpeg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mohammedia",
+        "addressRegion": "Casablanca-Settat",
+        "addressCountry": "MA"
+      },
+      "email": "mouadbaijou2002@gmail.com",
+      "telephone": "+212680320442",
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "ENSET Mohammedia"
+      },
+      "knowsAbout": ["Marketing Digital", "Commerce", "Gestion de Marque", "Études de Marché"]
+    }
+    </script>
+    
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <!-- LOADER -->
@@ -18,461 +53,420 @@
       <div class="loader-text">BAIJOU MOUAD</div>
     </div>
 
-    <!-- NAV -->
-    <nav id="navbar">
-      <div class="nav-logo">BAIJOU MOUAD</div>
-      <ul class="nav-links">
-        <li><a href="#about">Profil</a></li>
-        <li><a href="#education">Formation</a></li>
-        <li><a href="#experience">Expérience</a></li>
-        <li><a href="#projects">Projets</a></li>
-        <li><a href="#skills">Compétences</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="cv-baijou-mouad.pdf" download="CV-Baijou-Mouad.pdf" class="btn-cv">Mon CV</a></li>
-      </ul>
-      <button
-        class="nav-cta"
-        onclick="
-          document
-            .getElementById('contact')
-            .scrollIntoView({ behavior: 'smooth' })
-        "
-      >
-        Me Contacter
-      </button>
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-    </nav>
+    <!-- HEADER -->
+    <header>
+      <nav id="navbar" aria-label="Navigation principale">
+        <div class="nav-logo">BAIJOU MOUAD</div>
+        <ul class="nav-links">
+          <li><a href="#about">Profil</a></li>
+          <li><a href="#education">Formation</a></li>
+          <li><a href="#experience">Expérience</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="cv-baijou-mouad.pdf" download="CV-Baijou-Mouad.pdf" class="btn-cv">Mon CV</a></li>
+        </ul>
+        <button
+          class="nav-cta"
+          onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"
+        >
+          Me Contacter
+        </button>
+        <button class="menu-toggle" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+      </nav>
+    </header>
 
-    <!-- HERO -->
-    <section id="hero">
-      <div class="hero-bg">
-        <div class="hero-circle c1"></div>
-        <div class="hero-circle c2"></div>
-        <div class="hero-circle c3"></div>
-      </div>
-      <div class="hero-content">
-        <div class="hero-tag reveal">
-          Étudiant Master • Ingénierie Commerciale & Marketing Digital
+    <!-- MAIN -->
+    <main>
+      <!-- HERO -->
+      <section id="hero" aria-labelledby="hero-title">
+        <div class="hero-bg">
+          <div class="hero-circle c1"></div>
+          <div class="hero-circle c2"></div>
+          <div class="hero-circle c3"></div>
         </div>
-        <h1 class="hero-title reveal">
-          <span class="line">BAIJOU</span>
-          <span class="line accent">Mouad</span>
-        </h1>
-        <p class="hero-subtitle reveal">
-          Étudiant Master • Ingénierie Commerciale & Marketing Digital<br />ENSET Mohammedia —
-          2025 en cours
-        </p>
-        <div class="hero-ctas reveal">
-        <a href="#experience" class="btn-primary">Voir mon parcours</a>
-        <a href="cv-baijou-mouad.pdf" target="_blank" class="btn-outline">Visualiser CV</a>
-        <a href="cv-baijou-mouad.pdf" download="CV-Baijou-Mouad.pdf" class="btn-outline">Télécharger CV</a>
-        </div>
-      </div>
-      <div class="hero-image-wrap">
-        <img src="MB.png" alt="Mouad Baijou" class="hero-image" />
-      </div>
-      <div class="hero-scroll">
-        <span>Défiler</span>
-        <div class="scroll-line"></div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-photo-wrap reveal">
-            <div class="about-photo-bg"></div>
-            <img
-              src="photo.jpeg"
-              alt="Baijou Mouad"
-              class="about-photo"
-              onerror="
-                this.style.display = 'none';
-                this.parentElement.querySelector(
-                  '.about-placeholder',
-                ).style.display = 'flex';
-              "
-            />
-            <div class="about-placeholder">BM</div>
-            <div class="about-badge">
-              <span class="badge-txt">1 ère</span><br />
-              <span class="badge-txt">Année Master</span>
-            </div>
+        <div class="hero-content">
+          <div class="hero-tag reveal">
+            Étudiant Master • Ingénierie Commerciale & Marketing Digital
           </div>
-          <div class="about-text reveal">
-            <div class="section-label">À Propos</div>
-            <h2>Passionné par le<br /><em>Commerce | Marketing</em></h2>
-            <p>
-              Titulaire d’une licence professionnelle en management et administration des organisations, option gestion commerciale à l’Université Chouaib Doukkali. J’ai développé des compétences en marketing, analyse de marché et stratégie commerciale. Actuellement étudiant en Master en ingénierie commerciale et marketing digital, je souhaite approfondir mes connaissances dans des domaines à fort impact tels que le marketing, la gestion de marque, le commerce et le business administration.
-
-            </p>
-            <div class="about-langs">
-              <div class="lang-item">
-                <span class="lang-name">Arabe</span>
-                <div class="lang-bar">
-                  <div class="lang-fill" data-w="100"></div>
-                </div>
-                <span class="lang-pct">100%</span>
-              </div>
-              <div class="lang-item">
-                <span class="lang-name">Amazigh</span>
-                <div class="lang-bar">
-                  <div class="lang-fill" data-w="90"></div>
-                </div>
-                <span class="lang-pct">90%</span>
-              </div>
-              <div class="lang-item">
-                <span class="lang-name">Français</span>
-                <div class="lang-bar">
-                  <div class="lang-fill" data-w="80"></div>
-                </div>
-                <span class="lang-pct">80%</span>
-              </div>
-              <div class="lang-item">
-                <span class="lang-name">Anglais</span>
-                <div class="lang-bar">
-                  <div class="lang-fill" data-w="60"></div>
-                </div>
-                <span class="lang-pct">60%</span>
-              </div>
-            </div>
+          <h1 class="hero-title reveal" id="hero-title">
+            <span class="line">BAIJOU</span>
+            <span class="line accent">Mouad</span>
+          </h1>
+          <p class="hero-subtitle reveal">
+            Étudiant Master • Ingénierie Commerciale & Marketing Digital<br />ENSET Mohammedia —
+            2025 en cours
+          </p>
+          <div class="hero-ctas reveal">
+            <a href="#experience" class="btn-primary">Voir mon parcours</a>
+            <a href="cv-baijou-mouad.pdf" target="_blank" class="btn-outline" rel="noopener">Visualiser CV</a>
+            <a href="cv-baijou-mouad.pdf" download="CV-Baijou-Mouad.pdf" class="btn-outline">Télécharger CV</a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">Parcours Académique</div>
-          <h2>Formation</h2>
+        <div class="hero-image-wrap">
+          <img src="MB.png" alt="Portrait de Baijou Mouad, étudiant Master Marketing Digital ENSET Mohammedia" class="hero-image" loading="eager" />
         </div>
-        <div class="timeline">
-          <div class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <div class="tl-date">2025 — En cours</div>
-            <div class="tl-card">
-              <div class="tl-icon">🎓</div>
-              <h3>Master — Ingénierie Commerciale & Marketing Digital</h3>
-              <p class="tl-school">ENSET Mohammedia</p>
-              <p class="tl-loc">📍 Mohammedia</p>
+        <div class="hero-scroll">
+          <span>Défiler</span>
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" aria-labelledby="about-title">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-photo-wrap reveal">
+              <div class="about-photo-frame">
+                <div class="about-photo-inner">
+                  <img
+                    src="photo.jpeg"
+                    alt="Baijou Mouad en costume, portrait professionnel"
+                    class="about-photo"
+                    loading="lazy"
+                    onerror="this.style.display='none'; this.parentElement.parentElement.querySelector('.about-placeholder').style.display='flex';"
+                  />
+                  <div class="about-placeholder">BM</div>
+                </div>
+              </div>
+              <div class="about-badge">
+                <span class="badge-txt">1 ère</span><br />
+                <span class="badge-txt">Année Master</span>
+              </div>
             </div>
-          </div>
-          <div class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <div class="tl-date">2024 — 2025</div>
-            <div class="tl-card">
-              <div class="tl-icon">📜</div>
-              <h3>
-                Licence Pro — Management & Administration des Organisations
-              </h3>
-              <p class="tl-school">Faculté Polydisciplinaire SIDI BENNOUR</p>
-              <p class="tl-note">Option : Gestion Commerciale</p>
-              <p class="tl-loc">📍 El Jadida</p>
-            </div>
-          </div>
-          <div class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <div class="tl-date">2021 — 2023</div>
-            <div class="tl-card">
-              <div class="tl-icon">🌱</div>
-              <h3>
-                Technicien Spécialisé en Commercialisation des Intrants
-                Agricoles
-              </h3>
-              <p class="tl-school">
-                Institut de Technicien Spécialisé en Horticulture
+            <div class="about-text reveal">
+              <div class="section-label">À Propos</div>
+              <h2 id="about-title">Passionné par le<br /><em>Commerce | Marketing</em></h2>
+              <p>
+                Titulaire d'une licence professionnelle en management et administration des organisations, option gestion commerciale à l'Université Chouaib Doukkali. J'ai développé des compétences en marketing, analyse de marché et stratégie commerciale. Actuellement étudiant en Master en ingénierie commerciale et marketing digital, je souhaite approfondir mes connaissances dans des domaines à fort impact tels que le marketing, la gestion de marque, le commerce et le business administration.
               </p>
-              <p class="tl-loc">📍 Meknès</p>
+              <div class="about-langs">
+                <div class="lang-item">
+                  <span class="lang-name">Arabe</span>
+                  <div class="lang-bar">
+                    <div class="lang-fill" data-w="100"></div>
+                  </div>
+                  <span class="lang-pct">100%</span>
+                </div>
+                <div class="lang-item">
+                  <span class="lang-name">Amazigh</span>
+                  <div class="lang-bar">
+                    <div class="lang-fill" data-w="90"></div>
+                  </div>
+                  <span class="lang-pct">90%</span>
+                </div>
+                <div class="lang-item">
+                  <span class="lang-name">Français</span>
+                  <div class="lang-bar">
+                    <div class="lang-fill" data-w="80"></div>
+                  </div>
+                  <span class="lang-pct">80%</span>
+                </div>
+                <div class="lang-item">
+                  <span class="lang-name">Anglais</span>
+                  <div class="lang-bar">
+                    <div class="lang-fill" data-w="60"></div>
+                  </div>
+                  <span class="lang-pct">60%</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">Parcours Professionnel</div>
-          <h2>Expérience & Stages</h2>
+      <!-- EDUCATION -->
+      <section id="education" aria-labelledby="education-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="section-label">Parcours Académique</div>
+            <h2 id="education-title">Formation</h2>
+          </div>
+          <div class="timeline">
+            <div class="tl-item reveal">
+              <div class="tl-dot"></div>
+              <div class="tl-date">2025 — En cours</div>
+              <div class="tl-card">
+                <div class="tl-icon">🎓</div>
+                <h3>Master — Ingénierie Commerciale & Marketing Digital</h3>
+                <p class="tl-school">ENSET Mohammedia</p>
+                <p class="tl-loc">📍 Mohammedia</p>
+              </div>
+            </div>
+            <div class="tl-item reveal">
+              <div class="tl-dot"></div>
+              <div class="tl-date">2024 — 2025</div>
+              <div class="tl-card">
+                <div class="tl-icon">📜</div>
+                <h3>Licence Pro — Management & Administration des Organisations</h3>
+                <p class="tl-school">Faculté Polydisciplinaire SIDI BENNOUR</p>
+                <p class="tl-note">Option : Gestion Commerciale</p>
+                <p class="tl-loc">📍 El Jadida</p>
+              </div>
+            </div>
+            <div class="tl-item reveal">
+              <div class="tl-dot"></div>
+              <div class="tl-date">2021 — 2023</div>
+              <div class="tl-card">
+                <div class="tl-icon">🌱</div>
+                <h3>Technicien Spécialisé en Commercialisation des Intrants Agricoles</h3>
+                <p class="tl-school">Institut de Technicien Spécialisé en Horticulture</p>
+                <p class="tl-loc">📍 Meknès</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="exp-tabs reveal">
-          <button class="exp-tab active" data-tab="pro">Expérience Pro</button>
-          <button class="exp-tab" data-tab="stages">Stages</button>
-        </div>
+      </section>
 
-        <!-- PRO -->
-        <div class="exp-panel active" id="tab-pro">
-          <div class="exp-card reveal">
-            <div class="exp-header">
-              <div class="exp-logo">🏛️</div>
-              <div>
-                <h3>Agence des Bassins Hydrauliques (ABHSM)</h3>
-                <p class="exp-role">Agent Technique — Division Hydraulique</p>
-              </div>
-              <div class="exp-meta">
-                <span class="exp-date">Juillet 2024 — Octobre 2024</span>
-                <span class="exp-loc">Agadir</span>
-              </div>
-            </div>
-            <p class="exp-desc">
-              Travaux techniques relatifs à la gestion des carrières au sein de
-              la division hydraulique de l'agence.
-            </p>
+      <!-- EXPERIENCE -->
+      <section id="experience" aria-labelledby="experience-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="section-label">Parcours Professionnel</div>
+            <h2 id="experience-title">Expérience & Stages</h2>
           </div>
-        </div>
+          <div class="exp-tabs reveal">
+            <button class="exp-tab active" data-tab="pro">Expérience Pro</button>
+            <button class="exp-tab" data-tab="stages">Stages</button>
+          </div>
 
-        <!-- STAGES -->
-        <div class="exp-panel" id="tab-stages">
-          <div class="stages-grid">
-            <div class="stage-card reveal">
-              <div class="stage-emoji">🥛</div>
-              <div class="stage-content">
-                <h4>La Coopérative COPAG</h4>
-                <p class="stage-date">Avril — Juin 2025</p>
-                <p class="stage-loc">📍 Ait Iaaza</p>
-                <p>
-                  Spécialisée dans la production du lait, jus et produits
-                  laitiers.
-                </p>
+          <!-- PRO -->
+          <div class="exp-panel active" id="tab-pro">
+            <div class="exp-card reveal">
+              <div class="exp-header">
+                <div class="exp-logo">🏛️</div>
+                <div>
+                  <h3>Agence des Bassins Hydrauliques (ABHSM)</h3>
+                  <p class="exp-role">Agent Technique — Division Hydraulique</p>
+                </div>
+                <div class="exp-meta">
+                  <span class="exp-date">Juillet 2024 — Octobre 2024</span>
+                  <span class="exp-loc">Agadir</span>
+                </div>
               </div>
-            </div>
-            <div class="stage-card reveal">
-              <div class="stage-emoji">🌿</div>
-              <div class="stage-content">
-                <h4>L'Entreprise A.PHY.S.E.M</h4>
-                <p class="stage-date">Avril — Mai 2023</p>
-                <p class="stage-loc">📍 Fès</p>
-                <p>
-                  Production et vente de semences et de plantes aromatiques.
-                </p>
-              </div>
-            </div>
-            <div class="stage-card reveal">
-              <div class="stage-emoji">🌾</div>
-              <div class="stage-content">
-                <h4>L'Entreprise PHYTO.DIS</h4>
-                <p class="stage-date">Déc. 2022 — Jan. 2023</p>
-                <p class="stage-loc">📍 Oulad Berhil</p>
-                <p>Vente d'intrants agricoles.</p>
-              </div>
-            </div>
-            <div class="stage-card reveal">
-              <div class="stage-emoji">🍐</div>
-              <div class="stage-content">
-                <h4>Domaine Royal</h4>
-                <p class="stage-date">Juin — Juillet 2022</p>
-                <p class="stage-loc">📍 Agouray-Meknès</p>
-                <p>
-                  Production de fruits à noyaux (pêche, nectarine, poire,
-                  abricot).
-                </p>
-              </div>
-            </div>
-            <div class="stage-card reveal">
-              <div class="stage-emoji">🫐</div>
-              <div class="stage-content">
-                <h4>Domaine Laghraria</h4>
-                <p class="stage-date">Fév. — Mars 2022</p>
-                <p class="stage-loc">📍 Biougra</p>
-                <p>
-                  Production destinée à l'exportation de framboises et de
-                  myrtilles.
-                </p>
-              </div>
+              <p class="exp-desc">
+                Travaux techniques relatifs à la gestion des carrières au sein de
+                la division hydraulique de l'agence.
+              </p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">Réalisations</div>
-          <h2>Projets</h2>
-        </div>
-        <div class="projects-grid">
-          <div class="project-card featured reveal">
-            <div class="proj-tag">🏆 1er Prix</div>
-            <h3>Hackathon — 2ème Édition</h3>
-            <p>
-              Innovation d'une idée créative. Lauréat du premier prix lors de la
-              compétition.
-            </p>
-            <div class="proj-chips">
-              <span>Innovation</span><span>Créativité</span
-              ><span>Pitching</span>
-            </div>
-          </div>
-          <div class="project-card reveal">
-            <div class="proj-tag">📊</div>
-            <h3>Étude de Marché</h3>
-            <p>
-              Élaboration complète d'une étude de marché avec analyse
-              quantitative et qualitative.
-            </p>
-            <div class="proj-chips">
-              <span>Analyse</span><span>Stratégie</span>
-            </div>
-          </div>
-          <div class="project-card reveal">
-            <div class="proj-tag">🎬</div>
-            <h3>Spot Publicitaire</h3>
-            <p>
-              Conception et réalisation d'un spot publicitaire pour la Faculté
-              Polydisciplinaire Sidi Bennour.
-            </p>
-            <div class="proj-chips">
-              <span>Vidéo</span><span>Communication</span>
-            </div>
-          </div>
-          <div class="project-card reveal">
-            <div class="proj-tag">📱</div>
-            <h3>Marketing Digital Coopérative</h3>
-            <p>
-              Conception d'une démarche stratégique du développement digital
-              d'une coopérative agricole.
-            </p>
-            <div class="proj-chips">
-              <span>Digital</span><span>Stratégie</span
-              ><span>Social Media</span>
-            </div>
-          </div>
-          <div class="project-card reveal">
-            <div class="proj-tag">🎓 PFE</div>
-            <h3>UGC & E-Réputation</h3>
-            <p>
-              Recherche approfondie sur l'impact du User Generated Content sur
-              la e-réputation des marques.
-            </p>
-            <div class="proj-chips">
-              <span>UGC</span><span>E-Réputation</span><span>Recherche</span>
+          <!-- STAGES -->
+          <div class="exp-panel" id="tab-stages">
+            <div class="stages-grid">
+              <div class="stage-card reveal">
+                <div class="stage-emoji">🥛</div>
+                <div class="stage-content">
+                  <h4>La Coopérative COPAG</h4>
+                  <p class="stage-date">Avril — Juin 2025</p>
+                  <p class="stage-loc">📍 Ait Iaaza</p>
+                  <p>Spécialisée dans la production du lait, jus et produits laitiers.</p>
+                </div>
+              </div>
+              <div class="stage-card reveal">
+                <div class="stage-emoji">🌿</div>
+                <div class="stage-content">
+                  <h4>L'Entreprise A.PHY.S.E.M</h4>
+                  <p class="stage-date">Avril — Mai 2023</p>
+                  <p class="stage-loc">📍 Fès</p>
+                  <p>Production et vente de semences et de plantes aromatiques.</p>
+                </div>
+              </div>
+              <div class="stage-card reveal">
+                <div class="stage-emoji">🌾</div>
+                <div class="stage-content">
+                  <h4>L'Entreprise PHYTO.DIS</h4>
+                  <p class="stage-date">Déc. 2022 — Jan. 2023</p>
+                  <p class="stage-loc">📍 Oulad Berhil</p>
+                  <p>Vente d'intrants agricoles.</p>
+                </div>
+              </div>
+              <div class="stage-card reveal">
+                <div class="stage-emoji">🍐</div>
+                <div class="stage-content">
+                  <h4>Domaine Royal</h4>
+                  <p class="stage-date">Juin — Juillet 2022</p>
+                  <p class="stage-loc">📍 Agouray-Meknès</p>
+                  <p>Production de fruits à noyaux (pêche, nectarine, poire, abricot).</p>
+                </div>
+              </div>
+              <div class="stage-card reveal">
+                <div class="stage-emoji">🫐</div>
+                <div class="stage-content">
+                  <h4>Domaine Laghraria</h4>
+                  <p class="stage-date">Fév. — Mars 2022</p>
+                  <p class="stage-loc">📍 Biougra</p>
+                  <p>Production destinée à l'exportation de framboises et de myrtilles.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- SKILLS -->
-    <section id="skills">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">Savoir-faire</div>
-          <h2>Compétences</h2>
-        </div>
-        <div class="skills-grid">
-          <div class="skill-block reveal">
-            <div class="skill-icon">📊</div>
-            <h4>Management & Administration</h4>
-            <p>
-              Gestion d'équipes, planification stratégique et administration des
-              organisations.
-            </p>
+      <!-- PROJECTS -->
+      <section id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="section-label">Réalisations</div>
+            <h2 id="projects-title">Projets</h2>
           </div>
-          <div class="skill-block reveal">
-            <div class="skill-icon">🎯</div>
-            <h4>Marketing & Marketing Digital</h4>
-            <p>
-              Stratégies marketing, campagnes digitales, SEO et analyse des
-              performances.
-            </p>
-          </div>
-          <div class="skill-block reveal">
-            <div class="skill-icon">🔍</div>
-            <h4>Études de Marché</h4>
-            <p>
-              Conception et réalisation d'études de marché quantitatives et
-              qualitatives.
-            </p>
-          </div>
-          <div class="skill-block reveal">
-            <div class="skill-icon">🎨</div>
-            <h4>Canva & Infographie</h4>
-            <p>
-              Création de visuels professionnels, affiches, présentations et
-              contenus graphiques.
-            </p>
-          </div>
-          <div class="skill-block reveal">
-            <div class="skill-icon">🎬</div>
-            <h4>Montage Vidéo</h4>
-            <p>
-              Création et montage de contenus vidéo pour les réseaux sociaux et
-              la communication.
-            </p>
-          </div>
-          <div class="skill-block reveal">
-            <div class="skill-icon">💡</div>
-            <h4>Adaptabilité & Polyvalence</h4>
-            <p>
-              Capacité à s'adapter rapidement à différents environnements
-              professionnels.
-            </p>
+          <div class="projects-grid">
+            <div class="project-card featured reveal">
+              <div class="proj-tag">🏆 1er Prix</div>
+              <h3>Hackathon — 2ème Édition</h3>
+              <p>Innovation d'une idée créative. Lauréat du premier prix lors de la compétition.</p>
+              <div class="proj-chips">
+                <span>Innovation</span><span>Créativité</span><span>Pitching</span>
+              </div>
+            </div>
+            <div class="project-card reveal">
+              <div class="proj-tag">📊</div>
+              <h3>Étude de Marché</h3>
+              <p>Élaboration complète d'une étude de marché avec analyse quantitative et qualitative.</p>
+              <div class="proj-chips">
+                <span>Analyse</span><span>Stratégie</span>
+              </div>
+            </div>
+            <div class="project-card reveal">
+              <div class="proj-tag">🎬</div>
+              <h3>Spot Publicitaire</h3>
+              <p>Conception et réalisation d'un spot publicitaire pour la Faculté Polydisciplinaire Sidi Bennour.</p>
+              <div class="proj-chips">
+                <span>Vidéo</span><span>Communication</span>
+              </div>
+            </div>
+            <div class="project-card reveal">
+              <div class="proj-tag">📱</div>
+              <h3>Marketing Digital Coopérative</h3>
+              <p>Conception d'une démarche stratégique du développement digital d'une coopérative agricole.</p>
+              <div class="proj-chips">
+                <span>Digital</span><span>Stratégie</span><span>Social Media</span>
+              </div>
+            </div>
+            <div class="project-card reveal">
+              <div class="proj-tag">🎓 PFE</div>
+              <h3>UGC & E-Réputation</h3>
+              <p>Recherche approfondie sur l'impact du User Generated Content sur la e-réputation des marques.</p>
+              <div class="proj-chips">
+                <span>UGC</span><span>E-Réputation</span><span>Recherche</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <div class="section-label">Restons en Contact</div>
-        <h2>Parlons de votre<br/><em>projet ensemble</em></h2>
-        <p>Disponible pour des opportunités de stage, d'alternance ou toute collaboration professionnelle dans le domaine du marketing et du commerce.</p>
-        <div class="contact-items">
-          <a href="tel:+212680320442" class="contact-item">
-            <div class="ci-icon">📞</div>
-            <div><p class="ci-label">Téléphone</p><p class="ci-val">+212 680-320442</p></div>
-          </a>
-          <a href="mailto:mouadbaijou2002@gmail.com" class="contact-item">
-            <div class="ci-icon">✉️</div>
-            <div><p class="ci-label">Email</p><p class="ci-val">mouadbaijou2002@gmail.com</p></div>
-          </a>
-          <div class="contact-item">
-            <div class="ci-icon">📍</div>
-            <div><p class="ci-label">Localisation</p><p class="ci-val">Hay Nahda (حي النهضة) <br> Mohammedia 28810 <br> Région Casablanca-Settat <br> Maroc</p></div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="section-label">Savoir-faire</div>
+            <h2 id="skills-title">Compétences</h2>
           </div>
-          <a href="https://linkedin.com/in/Mouad-baijou" target="_blank" class="contact-item">
-            <div class="ci-icon">💼</div>
-            <div><p class="ci-label">LinkedIn</p><p class="ci-val">Mouad Baijou</p></div>
-          </a>
+          <div class="skills-grid">
+            <div class="skill-block reveal">
+              <div class="skill-icon">📊</div>
+              <h4>Management & Administration</h4>
+              <p>Gestion d'équipes, planification stratégique et administration des organisations.</p>
+            </div>
+            <div class="skill-block reveal">
+              <div class="skill-icon">🎯</div>
+              <h4>Marketing & Marketing Digital</h4>
+              <p>Stratégies marketing, campagnes digitales, SEO et analyse des performances.</p>
+            </div>
+            <div class="skill-block reveal">
+              <div class="skill-icon">🔍</div>
+              <h4>Études de Marché</h4>
+              <p>Conception et réalisation d'études de marché quantitatives et qualitatives.</p>
+            </div>
+            <div class="skill-block reveal">
+              <div class="skill-icon">🎨</div>
+              <h4>Canva & Infographie</h4>
+              <p>Création de visuels professionnels, affiches, présentations et contenus graphiques.</p>
+            </div>
+            <div class="skill-block reveal">
+              <div class="skill-icon">🎬</div>
+              <h4>Montage Vidéo</h4>
+              <p>Création et montage de contenus vidéo pour les réseaux sociaux et la communication.</p>
+            </div>
+            <div class="skill-block reveal">
+              <div class="skill-icon">💡</div>
+              <h4>Adaptabilité & Polyvalence</h4>
+              <p>Capacité à s'adapter rapidement à différents environnements professionnels.</p>
+            </div>
+          </div>
         </div>
-      </div>
-      
-      <div class="contact-form-wrap reveal">
-        <form id="contactForm" class="contact-form">
-          <div class="form-group">
-            <label>Nom complet</label>
-            <input type="text" name="from_name" placeholder="Votre nom" required/>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-info reveal">
+              <div class="section-label">Restons en Contact</div>
+              <h2 id="contact-title">Parlons de votre<br/><em>projet ensemble</em></h2>
+              <p>Disponible pour des opportunités de stage, d'alternance ou toute collaboration professionnelle dans le domaine du marketing et du commerce.</p>
+              <div class="contact-items">
+                <a href="tel:+212680320442" class="contact-item" aria-label="Téléphoner à Baijou Mouad">
+                  <div class="ci-icon">📞</div>
+                  <div><p class="ci-label">Téléphone</p><p class="ci-val">+212 680-320442</p></div>
+                </a>
+                <a href="mailto:mouadbaijou2002@gmail.com" class="contact-item" aria-label="Envoyer un email à Baijou Mouad">
+                  <div class="ci-icon">✉️</div>
+                  <div><p class="ci-label">Email</p><p class="ci-val">mouadbaijou2002@gmail.com</p></div>
+                </a>
+                <div class="contact-item">
+                  <div class="ci-icon">📍</div>
+                  <div><p class="ci-label">Localisation</p><p class="ci-val">Hay Nahda (حي النهضة) <br> Mohammedia 28810 <br> Région Casablanca-Settat <br> Maroc</p></div>
+                </div>
+                <a href="https://linkedin.com/in/Mouad-baijou" target="_blank" rel="noopener noreferrer" class="contact-item" aria-label="Voir le profil LinkedIn de Baijou Mouad">
+                  <div class="ci-icon">💼</div>
+                  <div><p class="ci-label">LinkedIn</p><p class="ci-val">Mouad Baijou</p></div>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-form-wrap reveal">
+              <form id="contactForm" class="contact-form" novalidate>
+                <!-- Honeypot anti-spam -->
+                <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+                
+                <div class="form-group">
+                  <label for="from_name">Nom complet</label>
+                  <input type="text" id="from_name" name="from_name" placeholder="Votre nom" required minlength="2" />
+                </div>
+                <div class="form-group">
+                  <label for="from_email">Email</label>
+                  <input 
+                    type="email" 
+                    id="from_email" 
+                    name="from_email" 
+                    placeholder="votre@email.com" 
+                    required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="Veuillez entrer une adresse email valide (ex: nom@domaine.com)"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="subject">Sujet</label>
+                  <input type="text" id="subject" name="subject" placeholder="Proposition, collaboration..." />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" placeholder="Votre message..." required minlength="10"></textarea>
+                </div>
+                <button type="submit" class="btn-primary full">Envoyer le message</button>
+                <div id="form-success" class="form-success" role="status" aria-live="polite" style="display:none"></div>
+              </form>
+            </div>
           </div>
-          <div class="form-group">
-            <label>Email</label>
-            <input type="email" name="from_email" placeholder="votre@email.com" required/>
-          </div>
-          <div class="form-group">
-            <label>Sujet</label>
-            <input type="text" name="subject" placeholder="Proposition, collaboration..."/>
-          </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
-          </div>
-          <button type="submit" class="btn-primary full">Envoyer le message</button>
-          <div id="form-success" class="form-success" style="display:none"></div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
+    </main>
 
     <!-- FOOTER -->
     <footer>
