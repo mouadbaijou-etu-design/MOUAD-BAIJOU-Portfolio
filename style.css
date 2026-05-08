@@ -500,38 +500,137 @@ h2 em {
   50% { opacity: 1; transform: scaleY(1); }
 }
 
-/* ── HERO IMAGE ── */
+/* ── HERO IMAGE (CORRIGÉ) ── */
 .hero-image-wrap {
   position: absolute;
-  right: 8%;
-  bottom: 5%;
+  right: 5%;
+  bottom: 0;
   z-index: 1;
-  max-width: 50%;
-  overflow: hidden;
+  max-width: 45%;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: visible;
 }
 
 .hero-image {
-  max-width: 47vw;
+  max-width: 100%;
+  width: auto;
   height: auto;
+  max-height: 85vh;
   border-radius: 0 0 200px 200px;
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
   opacity: 0.9;
   background: transparent;
+  object-fit: contain;
+  object-position: bottom center;
+  /* Empêche le débordement à droite */
+  transform: translateX(0);
 }
 
-/* ── ABOUT ── */
-#about {
-  padding: 120px 0;
-  background: var(--navy2);
+/* ── RESPONSIVE HERO IMAGE ── */
+@media (max-width: 1024px) {
+  .hero-image-wrap {
+    right: 2%;
+    max-width: 50%;
+  }
+  .hero-image {
+    max-height: 75vh;
+    border-radius: 0 0 150px 150px;
+  }
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 80px;
-  align-items: center;
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 100px;
+    padding-bottom: 0;
+    min-height: auto;
+  }
+  
+  .hero-content {
+    padding-left: 24px;
+    padding-right: 24px;
+    max-width: 100%;
+    text-align: center;
+    order: 1;
+  }
+  
+  .hero-title {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-outline {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .hero-image-wrap {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 30px;
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Supprime tout débordement */
+    overflow: hidden;
+    padding: 0 20px;
+  }
+  
+  .hero-image {
+    max-width: 80%;
+    max-height: 50vh;
+    border-radius: 0 0 100px 100px;
+    margin: 0 auto;
+    /* Centre la photo horizontalement */
+    display: block;
+    transform: none;
+  }
+  
+  .hero-scroll {
+    display: none;
+  }
 }
 
+@media (max-width: 480px) {
+  .hero-image-wrap {
+    padding: 0 10px;
+    margin-top: 20px;
+  }
+  
+  .hero-image {
+    max-width: 90%;
+    max-height: 45vh;
+    border-radius: 0 0 60px 60px;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-tag {
+    font-size: 0.7rem;
+    padding: 6px 14px;
+  }
+}
 /* NOUVEAU : Conteneur photo avec cadre doré */
 .about-photo-wrap {
   position: relative;
