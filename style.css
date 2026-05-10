@@ -830,9 +830,11 @@ h2 em {
   border-color: var(--gold-border);
   transform: translateX(6px);
 }
-.tl-icon {
-  font-size: 1.6rem;
+.tl-icon i {
+  font-size: 2.2rem;
   margin-bottom: 12px;
+  color: var(--gold2);
+  display: block;
 }
 .tl-card h3 {
   font-family: var(--ff-head);
@@ -855,6 +857,10 @@ h2 em {
 .tl-loc {
   color: var(--gray);
   font-size: 0.82rem;
+}
+.tl-loc i {
+  color: var(--gold);
+  margin-right: 5px;
 }
 
 /* ── EXPERIENCE ── */
@@ -913,8 +919,9 @@ h2 em {
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
-.exp-logo {
-  font-size: 2.5rem;
+.exp-logo i {
+  font-size: 2.8rem;
+  color: var(--gold2);
 }
 .exp-header h3 {
   font-family: var(--ff-head);
@@ -941,6 +948,10 @@ h2 em {
   font-size: 0.82rem;
   color: var(--gold);
 }
+.exp-loc i {
+  font-size: 0.8rem;
+  margin-right: 4px;
+}
 .exp-desc {
   color: var(--light);
   font-size: 1rem;
@@ -965,9 +976,10 @@ h2 em {
   border-color: var(--gold-border);
   transform: translateY(-4px);
 }
-.stage-emoji {
-  font-size: 2rem;
+.stage-icon i {
+  font-size: 2.2rem;
   flex-shrink: 0;
+  color: var(--gold2);
 }
 .stage-content h4 {
   font-family: var(--ff-head);
@@ -985,6 +997,10 @@ h2 em {
   font-size: 0.8rem;
   color: var(--gray);
   margin-bottom: 10px;
+}
+.stage-loc i {
+  color: var(--gold);
+  margin-right: 4px;
 }
 .stage-content p {
   font-size: 0.9rem;
@@ -1025,6 +1041,14 @@ h2 em {
   margin-bottom: 16px;
   text-transform: uppercase;
 }
+
+.proj-tag i {
+  font-size: 1.8rem; /* Taille agrandie */
+  display: block;    /* Place l'icône au-dessus du texte */
+  margin-bottom: 10px;
+  color: var(--gold2); /* Utilise un or un peu plus brillant */
+}
+
 .project-card h3 {
   font-family: var(--ff-head);
   font-size: 1.25rem;
@@ -1073,10 +1097,11 @@ h2 em {
   border-color: var(--gold-border);
   transform: translateY(-4px);
 }
-.skill-icon {
-  font-size: 2.5rem;
+.skill-icon i {
+  font-size: 2.8rem;
   margin-bottom: 16px;
-  display: block;
+  display: inline-block;
+  color: var(--gold2);
 }
 .skill-block h4 {
   font-family: var(--ff-head);
@@ -1132,8 +1157,12 @@ h2 em {
   transform: translateX(6px);
 }
 .ci-icon {
-  font-size: 1.6rem;
+  color: var(--gold2); /* Couleur par défaut pour les icônes de contact */
+}
+.ci-icon i {
+  font-size: 1.8rem;
   flex-shrink: 0;
+  color: inherit; /* Permet de garder le vert de WhatsApp s'il est défini sur le parent */
 }
 .ci-label {
   font-size: 0.75rem;
