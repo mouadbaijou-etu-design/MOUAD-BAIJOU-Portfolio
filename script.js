@@ -289,4 +289,20 @@ document.addEventListener('DOMContentLoaded', () => {
     badgeObserver.observe(badgeNum);
   }
 
+  // ── GESTION DE LA VISIBILITÉ DE LA BARRE FLOTTANTE ──
+  const stickyBar = document.getElementById('stickySocials');
+  const footer = document.querySelector('footer');
+
+  const footerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        stickyBar.classList.add('hidden');
+      } else {
+        stickyBar.classList.remove('hidden');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  if (footer && stickyBar) footerObserver.observe(footer);
+
 });
