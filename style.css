@@ -515,6 +515,17 @@ h2 em {
   overflow: visible;
 }
 
+.hero-image-wrap::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(var(--gold-rgb), 0.15) 0%, transparent 70%);
+  bottom: -10%;
+  z-index: -1;
+  filter: blur(20px);
+}
+
 .hero-image {
   max-width: 100%;
   width: auto;
@@ -1045,6 +1056,24 @@ h2 em {
   box-shadow: 0 10px 40px rgba(var(--gold-rgb), 0.1);
   position: relative;
   overflow: hidden;
+}
+
+.project-card.featured::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(-25deg);
+  animation: shimmer 6s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -150%; }
+  20% { left: 150%; }
+  100% { left: 150%; }
 }
 
 .project-card.featured::before {
